@@ -86,25 +86,25 @@ export function InstaReg() {
       : setdataUser(getUserData)
   }, [])
 
-  useEffect(() => {
-    const getIpKu = async () => {
-      const ip = await axios.get('https://api.ipify.org')
-      const { data } = await axios.get(`http://ip-api.com/json/${ip.data}?fields=221969`)
+  // useEffect(() => {
+  //   const getIpKu = async () => {
+  //     const ip = await axios.get('https://api.ipify.org')
+  //     const { data } = await axios.get(`http://ip-api.com/json/${ip.data}?fields=221969`)
 
-      setDataIp({
-        city: data.city,
-        country: data.country,
-        isp: data.isp,
-        query: data.query,
-        timezone: data.timezone,
-        proxy: data.proxy,
-        mobile: data.mobile,
-      })
+  //     setDataIp({
+  //       city: data.city,
+  //       country: data.country,
+  //       isp: data.isp,
+  //       query: data.query,
+  //       timezone: data.timezone,
+  //       proxy: data.proxy,
+  //       mobile: data.mobile,
+  //     })
 
-      return data
-    }
-    getIpKu()
-  }, [])
+  //     return data
+  //   }
+  //   getIpKu()
+  // }, [])
 
   return (
     <>
